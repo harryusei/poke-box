@@ -9,7 +9,8 @@ exports.seed = async function (knex) {
     {
       id: 1,
       species: "サンダー",
-      nickname: "Zapdos",
+      species_en: "Zapdos",
+      nickname: "最速CS珠",
       ability: "せいでんき",
       nature: "おくびょう",
       item: "いのちのたま",
@@ -23,12 +24,13 @@ exports.seed = async function (knex) {
       move_2: "ぼうふう",
       move_3: "ねっぷう",
       move_4: "はねやすめ",
-      description: "CS珠、A個体値0",
+      description: "A個体値0",
     },
     {
       id: 2,
       species: "ラッキー",
-      nickname: "Chansey",
+      species_en: "Chansey",
+      nickname: "BD252",
       ability: "しぜんかいふく",
       nature: "ずぶとい",
       item: "しんかのきせき",
@@ -42,7 +44,7 @@ exports.seed = async function (knex) {
       move_2: "タマゴうみ",
       move_3: "ステルスロック",
       move_4: "うたう",
-      description: "",
+      description: "A個体値0",
     },
   ]);
 };
