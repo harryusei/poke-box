@@ -16,7 +16,7 @@ describe('pokebox API Server', () => {
 
   describe('GET /api/pokebox/ping - test', () => {
     it('should return pong', async () => {
-      const res = await req.get('api/pokebox/ping');
+      const res = await req.get('/api/pokebox/ping');
       const pong = 'pong';
       res.should.be.html;
       res.text.should.equal(pong);
