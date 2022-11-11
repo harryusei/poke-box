@@ -1,8 +1,8 @@
 const express = require("express");
-const config = require("../knexfile");
-const knex = require("knex")(config);
+// const config = require("../knexfile");
+// const knex = require("knex")(config);
 const model = require("./model");
-const POKE_TABLE = model.POKE_TABLE;
+// const POKE_TABLE = model.POKE_TABLE;
 
 const setupServer = () => {
   const app = express();
@@ -34,6 +34,16 @@ const setupServer = () => {
       });
   });
 
+  app.post("/api/pokebox", (req, res) => {
+    model
+      .register(req.body)
+      .then((registeredPoke) => {
+        res.status(201).json(registeredPoke);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
   return app;
 };
 
