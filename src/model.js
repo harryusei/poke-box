@@ -1,5 +1,5 @@
 const knex = require("./knex");
-const pokeData = require("../data/pokedata.json");
+// const pokeData = require("../data/pokedata.json");
 const pokeName = require("../data/pokename.json");
 
 const POKE_TABLE = "poke_box";
@@ -23,5 +23,19 @@ module.exports = {
 
     // return inserted poke data
     return knex(POKE_TABLE).insert(data);
+  },
+
+  update(pokeId, updProp) {
+    return knex(POKE_TABLE)
+      .where({ id: parseInt(pokeId) })
+      .update(updProp)
+      .returning("*");
+  },
+
+  delete(pokeId) {
+    return knex(POKE_TABLE)
+      .where({ id: parseInt(pokeId) })
+      .del()
+      .returning("*");
   },
 };

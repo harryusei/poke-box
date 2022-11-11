@@ -62,4 +62,24 @@ describe("pokebox API Server", () => {
       JSON.parse(getRes.text).length.should.equal(2);
     });
   });
+
+  describe("PATCH /api/pokebox/:id - modify poke data", () => {
+    it("should modify poke data by id", async () => {
+      await req.patch("/api/pokebox/4").send({ move_1: "10まんボルト" });
+      const res = await req.get("/api/pokebox/zapdos");
+      JSON.parse(res.text)[1].move_1.should.equal("10まんボルト");
+    });
+  });
+
+  describe("DELETE /api/pokebox/ - delete poke data", () => {
+    it("should delete poke data by id", async () => {
+      const deleteRes = await req.delete("/api/pokebox").query({ id: 4 });
+      JSON.parse(deleteRes.text)[0].id.should.equal(4);
+      const getRes = await req.get("/api/pokebox");
+      const data = JSON.parse(getRes.text);
+      for (let i = 0; i < 3; i++) {
+        data[i].id.should.equal(i + 1);
+      }
+    });
+  });
 });

@@ -44,6 +44,29 @@ const setupServer = () => {
         console.error(err);
       });
   });
+
+  app.patch("/api/pokebox/:id", (req, res) => {
+    model
+      .update(req.params.id, req.body)
+      .then((poke) => {
+        res.send(poke);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+
+  app.delete("/api/pokebox", (req, res) => {
+    model
+      .delete(req.query.id)
+      .then((poke) => {
+        res.send(poke);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  });
+
   return app;
 };
 
