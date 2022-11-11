@@ -77,6 +77,24 @@ module.exports = {
     move_4: "はねやすめ",
     description: "H実数値191、S+1で最速ウツロイド抜き",
   },
+  newPokemon2: {
+    id: 4,
+    species: "サンダー",
+    species_en: "Zapdos",
+    nickname: "さんだ〜",
+    ability: "せいでんき",
+    nature: "ずぶとい",
+    item: "あつぞこブーツ",
+    eff_h: 252,
+    eff_a: 0,
+    eff_b: 252,
+    eff_c: 0,
+    eff_d: 0,
+    eff_s: 4,
+    move_1: "ほうでん",
+    move_2: "ぼうふう",
+    move_3: "かいでんぱ",
+    move_4: "はねやすめ",
+    description: "物理受け、A個体値0",
+  },
 };
-
-// module.exports = { initPokeBox };

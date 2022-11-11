@@ -20,7 +20,6 @@ module.exports = {
   register(data) {
     const name_en = pokeName[data.species];
     data["species_en"] = name_en;
-    console.log(data);
 
     // return inserted poke data
     return knex(POKE_TABLE).insert(data);

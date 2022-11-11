@@ -53,5 +53,13 @@ describe("pokebox API Server", () => {
       const getRes = await req.get("/api/pokebox/dragonite");
       JSON.parse(getRes.text)[0].should.deep.equal(dragonite);
     });
+
+    it("should register same pokemon", async () => {
+      const newPokemon2 = fixtures.newPokemon2;
+      const postRes = await req.post("/api/pokebox").send(newPokemon2);
+      postRes.should.have.status(201);
+      const getRes = await req.get("/api/pokebox/zapdos");
+      JSON.parse(getRes.text).length.should.equal(2);
+    });
   });
 });
