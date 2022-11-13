@@ -1,12 +1,11 @@
 const express = require("express");
-// const config = require("../knexfile");
-// const knex = require("knex")(config);
+const path = require("path");
 const model = require("./model");
-// const POKE_TABLE = model.POKE_TABLE;
 
 const setupServer = () => {
   const app = express();
   app.use(express.json());
+  app.use(express.static(path.resolve(__dirname, "../public")));
 
   app.get("/api/pokebox/ping", (req, res) => {
     res.send("pong");
