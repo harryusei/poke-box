@@ -2,14 +2,52 @@
 <html>
   <head>
     <meta charset="utf8" />
-    <title>Example</title>
+    <title>POKEBOX</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js"></script>
   </head>
   <body>
     <header>
-      <h1>Hello!</h1>
+      <h1>POKEBOX</h1>
+      <p>育成したポケモンの新規登録・情報管理ができます。</p>
     </header>
     <main>
-      <p>I am public/index.html</p>
+      <section id="register">
+        <button id="registerButton">新規ポケモン登録</button>
+      </section>
+      <section id="edit">
+        <button id="editButton">ポケモン情報編集</button>
+        <button id="deleteButton">ポケモン情報削除</button>
+      </section>
+      <section id="table">
+        <table id="pokeDataTable">
+          <thead>
+            <tr>
+              <th rowspan="2">ID</th>
+              <th rowspan="2">種類</th>
+              <th rowspan="2">NN</th>
+              <th rowspan="2">特性</th>
+              <th rowspan="2">性格</th>
+              <th rowspan="2">持ち物</th>
+              <th colspan="6">努力値</th>
+              <th colspan="4">技</th>
+              <th rowspan="2">備考</th>
+            </tr>
+            <tr>
+              <th>HP</th>
+              <th>攻撃</th>
+              <th>防御</th>
+              <th>特攻</th>
+              <th>特防</th>
+              <th>素早</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
     </main>
   </body>
 </html>

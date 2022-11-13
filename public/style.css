@@ -1,0 +1,35 @@
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 18px;
+  color: #dcddde;
+  background-color: #36393f;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #70767b;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: large;
+  color: #dcddde;
+  border-radius: 5px;
+  border: 1px solid #1da1f2;
+  background-color: #1da1f2;
+}
+
+#deleteButton {
+  border: 1px solid red;
+  background-color: red;
+}
+
+table,
+th,
+td {
+  border: 1px solid #dcddde;
+  border-collapse: collapse;
+}
