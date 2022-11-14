@@ -1,6 +1,8 @@
-# poke-box
+# POKEBOX
 
 育成したポケモンのデータを登録・編集・削除・検索できます。
+
+![image](https://github.com/harryusei/poke-box/img/top.png?raw=true)
 
 ## HowToUse
 

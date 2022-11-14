@@ -24,6 +24,31 @@ h1 {
   background-color: #dcddde;
 }
 
+#searchArea {
+  margin-top: 10px;
+}
+
+#searchForm {
+  margin: 5px;
+}
+
+#searchInput {
+  padding: 10px;
+  /* font-size: large; */
+  border-radius: 5px;
+  border: 2px solid #3879d9;
+  color: #36393f;
+}
+
+#searchButton {
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #3879d9;
+  color: #fff;
+  border: none;
+}
+
 table {
   border: 1px solid #dcddde;
   border-collapse: collapse;
