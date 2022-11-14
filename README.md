@@ -2,7 +2,7 @@
 
 育成したポケモンのデータを登録・編集・削除・検索できます。
 
-![image](https://github.com/harryusei/poke-box/tree/master/img/top.png?raw=true)
+![image](img/top.png?raw=true)
 
 ## HowToUse
 
