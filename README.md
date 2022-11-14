@@ -8,6 +8,35 @@
 
 対戦のために大量のポケモンを育成するが、パラメータの詳細や役割などの情報をゲーム内にメモしておくことができないため登録しておく場所がほしかった
 
+# Files
+
+```
+.
+├── README.md
+├── data
+│   ├── pokedata.json
+│   └── pokename.json
+├── db
+│   ├── migrations
+│   └── seeds
+├── knexfile.js
+├── node_modules(略)
+├── package-lock.json
+├── package.json
+├── public
+│   ├── app.js
+│   ├── index.html
+│   └── style.css
+├── src
+│   ├── index.js
+│   ├── knex.js
+│   ├── model.js
+│   └── server.js
+└── test
+    ├── _pokeBox.js
+    └── fixtures.js
+```
+
 # API usage
 
 ## データ構造
