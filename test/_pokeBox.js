@@ -82,4 +82,12 @@ describe("pokebox API Server", () => {
       }
     });
   });
+
+  describe("GET /api/pokebox/pokename - return ja-en translate data", () => {
+    it("should return ja-en translate data", async () => {
+      const res = await req.get("/api/pokebox/pokename");
+      JSON.parse(res.text)["フシギダネ"].should.equal("Bulbasaur");
+      Object.keys(JSON.parse(res.text)).length.should.equal(151);
+    });
+  });
 });

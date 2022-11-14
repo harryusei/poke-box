@@ -1,9 +1,34 @@
 window.addEventListener("load", async () => {
-  const res = await fetch("http://localhost:3000/api/pokebox");
-  const pokeBoxData = await res.json();
-
+  const initPokeBoxData = await (
+    await fetch("http://localhost:3000/api/pokebox")
+  ).json();
+  const pokeName = await (
+    await fetch("http://localhost:3000/api/pokebox/pokename")
+  ).json();
   const table = document.getElementById("pokeDataTable");
-  pokeBoxData.forEach((poke) => {
+
+  initPokeBoxData.forEach((poke) => {
+    addPokeRow(poke);
+  });
+
+  document
+    .querySelector("#searchButton")
+    .addEventListener("click", async () => {
+      const name = document.getElementById("searchInput").value;
+      const name_en = pokeName[name];
+      const url = "http://localhost:3000/api/pokebox/" + name_en;
+      const searchPokeData = await (await fetch(url)).json();
+
+      // 一旦tableの各行を削除。絶対もっといいやり方がある
+      for (let i = 0; i < table.rows.length; i++) {
+        table.deleteRow(-1);
+      }
+      searchPokeData.forEach((poke) => {
+        addPokeRow(poke);
+      });
+    });
+
+  function addPokeRow(poke) {
     let row = table.insertRow();
 
     // id
@@ -73,5 +98,5 @@ window.addEventListener("load", async () => {
     // 備考欄
     let cell_desc = row.insertCell(16);
     cell_desc.innerText = poke.description;
-  });
+  }
 });

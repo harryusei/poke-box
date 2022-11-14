@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const model = require("./model");
+const pokeName = require("../data/pokename.json");
 
 const setupServer = () => {
   const app = express();
@@ -9,6 +10,10 @@ const setupServer = () => {
 
   app.get("/api/pokebox/ping", (req, res) => {
     res.send("pong");
+  });
+
+  app.get("/api/pokebox/pokename", (req, res) => {
+    res.json(pokeName);
   });
 
   app.get("/api/pokebox", (req, res) => {

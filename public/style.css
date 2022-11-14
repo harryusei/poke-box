@@ -12,24 +12,34 @@ h1 {
   border-bottom: 2px solid #70767b;
 }
 
-button {
+#registerButton,
+#editButton,
+#deleteButton {
   margin: 5px;
   padding: 10px;
   font-size: large;
-  color: #dcddde;
+  color: #36393f;
   border-radius: 5px;
-  border: 1px solid #1da1f2;
-  background-color: #1da1f2;
+  border: 1px solid #dcddde;
+  background-color: #dcddde;
 }
 
-#deleteButton {
-  border: 1px solid red;
-  background-color: red;
-}
-
-table,
-th,
-td {
+table {
   border: 1px solid #dcddde;
   border-collapse: collapse;
+}
+
+th {
+  background-color: #70767b;
+  border: 1px solid #36393f;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+td {
+  background-color: #dcddde;
+  color: #36393f;
+  border: 1px solid #36393f;
+  border-collapse: collapse;
+  padding: 5px;
 }
