@@ -20,7 +20,8 @@ window.addEventListener("load", async () => {
       const searchPokeData = await (await fetch(url)).json();
 
       // 一旦tableの各行を削除。絶対もっといいやり方がある
-      for (let i = 0; i < table.rows.length; i++) {
+      const dataCount = table.rows.length;
+      for (let i = 0; i < dataCount - 2; i++) {
         table.deleteRow(-1);
       }
       searchPokeData.forEach((poke) => {
